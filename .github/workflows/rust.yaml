@@ -1,0 +1,37 @@
+name: Rust
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: 0
+  CARGO_NET_RETRY: 10
+  RUST_BACKTRACE: short
+  RUSTUP_MAX_RETRIES: 10
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ci-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: just@1.25.2,cross@0.2.5
+      - uses: Swatinem/rust-cache@v2
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.81.0
+          components: clippy, rustfmt
+          targets: x86_64-unknown-linux-musl
+      - name: Dependencies
+        run: sudo apt install musl-tools -y
+      - name: Compile workspace (x86)
+        run: just cargo-compile
+      - name: Compile workspace (ARM64)
+        run: just cargo-compile-arm
