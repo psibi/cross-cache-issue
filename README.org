@@ -2,3 +2,17 @@
 
 This repository reproduces a bug of cache not being properly preserved
 when used with [[https://github.com/cross-rs/cross][cross]] for cross compilation.
+
+* Current behaviour
+
+* Expected behaviour
+
+* Workaround
+
+There are several options available currently as an workaround for the
+bug:
+
+- Have separate target directories. You can use the option
+  ~--target-dir~ to specify a different directory and then cache it.
+- Create different github job for compiling using a specific
+  architecture.
