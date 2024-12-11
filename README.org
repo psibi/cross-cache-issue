@@ -16,7 +16,7 @@ Re-complation.
 
 - No recompilation.
 
-* Workaround
+* Workarounds
 
 There are several options available currently as an workaround for the
 bug:
