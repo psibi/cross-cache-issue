@@ -36,6 +36,8 @@ jobs:
           toolchain: 1.81.0
           components: clippy, rustfmt
           targets: x86_64-unknown-linux-musl
+      - name: Version
+        run: cargo version --verbose
       - name: Dependencies
         run: sudo apt install musl-tools -y
       - name: Compile workspace (x86-musl)
