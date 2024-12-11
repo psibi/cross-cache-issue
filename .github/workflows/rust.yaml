@@ -23,6 +23,13 @@ jobs:
       - uses: taiki-e/install-action@v2
         with:
           tool: just@1.25.2,cross@0.2.5
+      - name: Cache Primes
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo
+            target
+          key: cross
       - uses: Swatinem/rust-cache@v2
       - uses: dtolnay/rust-toolchain@master
         with:
