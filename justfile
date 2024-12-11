@@ -4,7 +4,7 @@ default:
 
 # Build binary (x86)
 cargo-compile:
-	cargo test --workspace --release --no-run --locked --target x86_64-unknown-linux-musl
+	cargo test --workspace --release --no-run --locked --target x86_64-unknown-linux-musl --verbose
 
 # Cargo compile (ARM64)
 cargo-compile-arm:
