@@ -7,6 +7,8 @@ when used with cargo with multiple targets.
 
 * Expected behaviour
 
+- No recompilation.
+
 * Workaround
 
 There are several options available currently as an workaround for the
