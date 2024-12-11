@@ -1,7 +1,7 @@
 * Introduction
 
 This repository reproduces a bug of cache not being properly preserved
-when used with [[https://github.com/cross-rs/cross][cross]] for cross compilation.
+when used with cargo with multiple targets.
 
 * Current behaviour
 
