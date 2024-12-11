@@ -5,6 +5,13 @@ when used with cargo with multiple targets.
 
 * Current behaviour
 
+#+begin_src sh
+Dirty proc-macro2 v1.0.92: the path to the source changed
+Compiling proc-macro2 v1.0.92
+#+end_src
+
+Re-complation.
+
 * Expected behaviour
 
 - No recompilation.
