@@ -12,4 +12,4 @@ cargo-compile-arm:
 
 # Cargo compile (x86-gnu)
 cargo-compile-gnu:
-	cross test --workspace --release --no-run --locked --target x86_64-unknown-linux-gnu --verbose
+	cargo test --workspace --release --no-run --locked --target x86_64-unknown-linux-gnu --verbose
