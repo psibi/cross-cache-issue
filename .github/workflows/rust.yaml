@@ -11,7 +11,7 @@ env:
   CARGO_NET_RETRY: 10
   RUST_BACKTRACE: short
   RUSTUP_MAX_RETRIES: 10
-  CARGO_LOG: cargo::core::compiler::fingerprint=trace
+  # CARGO_LOG: cargo::core::compiler::fingerprint=trace
 
 jobs:
   checks:
@@ -30,7 +30,7 @@ jobs:
           path: |
             ~/.cargo
             target
-          key: v3
+          key: v4
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: 1.81.0
