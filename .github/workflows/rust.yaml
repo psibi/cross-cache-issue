@@ -30,7 +30,7 @@ jobs:
           path: |
             ~/.cargo
             target
-          key: v4
+          key: v5
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: 1.81.0
