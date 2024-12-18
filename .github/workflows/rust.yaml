@@ -35,7 +35,7 @@ jobs:
         with:
           toolchain: 1.81.0
           components: clippy, rustfmt
-          targets: x86_64-unknown-linux-musl
+          targets: x86_64-unknown-linux-musl,aarch64-unknown-linux-musl
       - name: Version
         run: cargo version --verbose
       - name: Dependencies
