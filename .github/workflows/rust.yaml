@@ -42,5 +42,5 @@ jobs:
         run: sudo apt install musl-tools -y
       - name: Compile workspace (x86-musl)
         run: just cargo-compile
-      - name: Compile workspace (x86-gnu)
-        run: just cargo-compile-gnu
+      - name: Compile workspace (arm-musl)
+        run: just cargo-compile-arm
