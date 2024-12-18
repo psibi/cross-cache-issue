@@ -14,7 +14,7 @@ Re-complation happens as seem from the above logs.
 
 * Expected behaviour
 
-- No recompilation.
+- No recompilation should happen.
 
 * Workarounds
 
